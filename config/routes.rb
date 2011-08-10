@@ -1,4 +1,6 @@
 Wordpressbackup::Application.routes.draw do
+  resources :sites
+
   resources :users
 
   # The priority is based upon order of creation:
