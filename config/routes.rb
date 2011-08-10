@@ -1,4 +1,14 @@
 Wordpressbackup::Application.routes.draw do
+  get "pages/home"
+
+  get "pages/features"
+
+  get "pages/pricing"
+
+  get "pages/faq"
+
+  get "pages/contact"
+
   resources :sites
 
   resources :users
