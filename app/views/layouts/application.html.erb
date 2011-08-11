@@ -1,14 +1,223 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Wordpressbackup</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
+<!DOCTYPE html PUBLIC> 
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
+<head profile="http://gmpg.org/xfn/11">
+	<title><%= title %></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="wordpress backup" />
+	<meta name="description" content="TeamBravo WordPress Backup" />
+	<meta name="author" content="Han Chang" />
+	<meta name="copyright" content="&copy; 2011" />
+
   <%= csrf_meta_tag %>
-</head>
-<body>
+    <link rel="shortcut icon" href="_include/images/icons/favicon.ico" type="image/x-icon" />
+	
+    <!-- Load Jquery -->
+		<%= javascript_include_tag 'jquery.js' %>
+    <!-- End Load -->
 
+    <!-- for IE6 i'm sorry but there is too much wrong with it, needs warning at least, you can disable it by delething this load. -->
+		<%= javascript_include_tag 'jquery.badBrowser.js' %>
+    <!-- End Load -->
+
+    <!-- ALL jQuery Tools. jQuery library -->
+		<%= javascript_include_tag 'jquery.tools.js' %>
+    <!-- End Load -->
+
+    <!-- Load Jquery Easing -->
+		<%= javascript_include_tag 'jquery.easing.js' %>
+		<%= javascript_include_tag 'jquery.css-transform.js' %>
+		<%= javascript_include_tag 'jquery.css-rotate-scale.js' %>
+    <!-- End Load -->
+
+    <!-- Load Cufon and Adiacent Font Files, Applying the fonts, and configuring is done in _include/js/custom.js -->
+		<%= javascript_include_tag 'cufon.js' %>
+    <!-- Locally hosted fonts -->
+		<%= javascript_include_tag 'arials.font.js' %>
+    <!-- Fonts Hosted Online, Can't be packed in the zip - For Licence Issues, but Safe to Download and then Use Locally after Download (for Personal Use) -->
+		<%= javascript_include_tag 'http://www.bogdanrosu.com/temp/fonts/zurich.font.js' %>
+    <!-- ...and some Online Hosted alternatives -->
+    <!--
+		<%= javascript_include_tag 'http://www.bogdanrosu.com/temp/fonts/univers.font.js' %>
+		<%= javascript_include_tag 'http://www.bogdanrosu.com/temp/fonts/helv.font.js' %>
+		<%= javascript_include_tag 'http://www.bogdanrosu.com/temp/fonts/helv.font.js' %>
+		<%= javascript_include_tag 'http://www.bogdanrosu.com/temp/fonts/frutiger.font.js' %>
+		<%= javascript_include_tag 'http://www.bogdanrosu.com/temp/fonts/zurich.font.js' %>
+		<%= javascript_include_tag 'http://www.bogdanrosu.com/temp/fonts/human.font.js' %>
+     -->
+    <!-- End Load -->
+
+    <!-- Load Pretty Photo -->
+		<%= stylesheet_link_tag 'jquery.prettyPhoto.css', :media => 'screen' %>
+		<%= javascript_include_tag 'jquery.prettyPhoto.js' %>
+    <!-- End Load -->
+
+    <!-- Load SWFObject, used for video embedding -->
+		<%= javascript_include_tag 'swfobject.js' %>
+    <!-- End Load -->
+
+    <!-- Load Captify -->
+		<%= javascript_include_tag 'jquery.captify.js' %>
+    <!-- End Load -->
+
+    <!-- Load Bubble Tip -->
+		<%= stylesheet_link_tag 'jquery.bubbletip.css' %>
+		<%= javascript_include_tag 'jquery.bubbletip.js' %>
+		<!--[if IE]>
+				<link href="_include/css/jquery.bubbletip-ie.css" rel="stylesheet" type="text/css" />
+		<![endif]-->
+    <!-- End Load -->
+
+    <!-- Load Roundies -->
+		<%= javascript_include_tag 'browserdetect.js' %>
+		<%= javascript_include_tag 'roundies.js' %>
+    <!-- End Load -->
+
+    <!-- Load Jquery Twitter -->
+		<%= javascript_include_tag 'jquery.tweet.js' %>
+    <!-- End Load -->
+
+    <!-- Load some small custom scripts -->
+		<%= javascript_include_tag 'custom.js' %>
+    <!-- End Load -->
+
+    <!-- Load Main Stylesheets and Default Color and Style -->
+		<%= stylesheet_link_tag 'style.css', :media => 'screen' %>
+    <!-- IMPORTANT: This line above is the generic style, should be left alone -->
+
+		<%= stylesheet_link_tag 'style-green.css', :media => 'screen' %>
+    <!-- IMPORTANT: This line above is the line that sets wich style you use by default, after you select wich you like to use, plug it in the line above the disable the style switcher, to do that either read the documentation or folow the note below refering to this -->
+    <!-- End Load -->
+
+    <!-- Load Main Enhancements Stylesheet border radius, transparency, shadows and such things -->
+		<%= stylesheet_link_tag 'style-enhance.css', :media => 'screen' %>
+    <!-- End Load -->
+
+    <!-- Load IE6 Stylesheet -->
+    <!--[if IE 6]>
+				<%= stylesheet_link_tag 'ie6.css', :media => 'screen' %>
+    <![endif]-->
+    <!-- End Load -->
+
+    <!-- Load IE7 Stylesheet -->
+    <!--[if IE 7]>
+				<%= stylesheet_link_tag 'ie7.css', :media => 'screen' %>
+    <![endif]-->
+    <!-- End Load -->
+
+    <!-- Load PNG Fix older IE Versions -->
+    <!--[if lt IE 7]>
+        <script type="text/javascript" src="_include/js/pngfix.js"></script>
+				<%= javascript_include_tag 'pngfix.js' %>
+        <script type="text/javascript">DD_belatedPNG.fix('*');</script>
+    <![endif]-->
+    <!-- End Load -->
+
+
+<!-- start top -->
+<div class="top">
+    <div class="full-width rel">
+        <div class="one-third"><div class="logo"><a href="http://www.bogdanrosu.com/themeforest/apptastik/php"><%= image_tag("misc/logo.png", :alt => "Apptastik HTML") %></a></div></div>
+        <div class="two-third">
+            <div class="rel">
+                <div class="abs utility">
+                    <div class="icon-to-left"><%= image_tag("icons/smallphone.png") %></div>Give us a Call: <strong>1-800-APTSTIK</strong> or <a href="#">E-mail Us</a> Directly.<div class="clear"></div>
+                </div>
+            </div>
+            <div class="mainmenu">
+            <ul>
+                <li class="active"><a href="index.php"><span>Home</span></a></li>
+                <li ><a href="index-static.php"><span>Features</span></a></li>
+                <li ><a href="index-roundabout.php"><span>Pricing</span></a></li>
+                <li ><a href="features.php"><span>FAQ</span></a></li>
+                <li ><a href="faq.php"><span>Support</span></a></li>
+                <li ><a href="contact.php"><span>Contact</span></a></li>
+            </ul>
+            </div>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<!-- end top -->
+<!-- start middle -->
+<div class="middle">
 <%= yield %>
+</div>
+<!-- end middle  -->
 
+<!-- start footer -->
+<div class="footer">
+    <div class="footer-big">
+        <div class="full-width">
+            <div class="one-fourth footer-panel">
+               <h3>Nunc vulputate interädum</h3>
+               <ul>
+                    <li><a href="#">Phasellus a neque</a></li>
+                    <li><a href="#">Nunc vulputate interdum vitae</a></li>
+                    <li><a href="#">Quis justo entesque</a></li>
+                    <li><a href="#">Culputate interdum vitae</a></li>
+                    <li><a href="#">Nunc vulputate interdum vitae</a></li>
+                    <li><a href="#">Quis justo entesque</a></li>
+               </ul>
+            </div>
+            <div class="one-fourth footer-panel">
+               <h3>Latest Tweets</h3>
+            		<div class="tweet">
+                        <!--  -->
+            		</div>
+            </div>
+            <div class="one-fourth footer-panel">
+               <h3>Vulputate interdum</h3>
+               <ul>
+                    <li><a href="#">Phasellus a neque</a></li>
+                    <li><a href="#">Nunc vulputate interdum vitae</a></li>
+                    <li><a href="#">Quis justo entesque</a></li>
+                    <li><a href="#">Culputate interdum vitae</a></li>
+                    <li><a href="#">Nunc vulputate interdum vitae</a></li>
+                    <li><a href="#">Quis justo entesque</a></li>
+               </ul>
+            </div>
+            <div class="one-fourth footer-panel">
+               <h3>Get Social &amp; Such</h3>
+               <ul class="social">
+                    <li><a href="#" class="twitter">Twitter</a></li>
+                    <li class="last"><a href="#" class="facebook">Facebook</a></li>
+                    <li><a href="#" class="vimeo">Vimeo</a></li>
+                    <li class="last"><a href="#" class="youtube">YouTube</a></li>
+                    <li><a href="#" class="flickr">Flickr</a></li>
+                    <li class="last"><a href="#" class="rss">RSS</a></li>
+                    <li><!-- &nbsp; --></li>
+                    <li class="last"><!-- &nbsp; --></li>
+               </ul>
+               <div class="clear"></div>
+               <div class="rel mt10">
+               <!-- Uncomment these for facebook and twitter Buttons, also edit URLs according to yours -->
+               <!--
+               <script src="http://platform.twitter.com/widgets.js" type="text/javascript"></script>
+               <a href="http://twitter.com/share?url=http%3A%2F%2Fwww.bogdanrosu.com%2Fthemeforest%2Fapptastik%2Fphp%2F" class="twitter-share-button">Tweet</a>
+
+               <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.bogdanrosu.com%2Fthemeforest%2Fapptastik%2Fphp%2F&amp;layout=button_count&amp;show_faces=false&amp;width=88&amp;action=like&amp;font=arial&amp;colorscheme=dark&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:90px; height:21px;" allowTransparency="true"></iframe>
+                -->
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="footer-small">
+        <div class="full-width">
+            <div class="one-half left">
+                &copy; 2011 Bogdan Rosu. All rights reserved.            </div>
+            <div class="one-half right">
+                Apptastik HTML by Bogdan Rosu available exclusively at <a href="http://themeforest.net/user/bogdanspn/portfolio?ref=bogdanspn">Themeforest</a>.
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</div>
+<!-- end footer -->
+
+<!-- execute cufon for IE flickering -->
+<script type="text/javascript"> Cufon.now(); </script>
+<!-- end cufon execute -->
 </body>
 </html>
