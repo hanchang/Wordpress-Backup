@@ -1,10 +1,10 @@
 <!DOCTYPE html PUBLIC> 
 <html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en-US">
 <head profile="http://gmpg.org/xfn/11">
-	<title><%= title %></title>
+	<title><%= title %> | Easy Automated WordPress Backups</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="keywords" content="wordpress backup" />
-	<meta name="description" content="TeamBravo WordPress Backup" />
+	<meta name="description" content="Easy WordPress Backup" />
 	<meta name="author" content="Han Chang" />
 	<meta name="copyright" content="&copy; 2011" />
 
@@ -116,21 +116,23 @@
 <!-- start top -->
 <div class="top">
     <div class="full-width rel">
-        <div class="one-third"><div class="logo"><a href="http://www.bogdanrosu.com/themeforest/apptastik/php"><%= image_tag("misc/logo.png", :alt => "Apptastik HTML") %></a></div></div>
+        <div class="one-third"><div class="logo"><h2><%= link_to "Easy WordPress Backup", root_path %></h2></div></div>
         <div class="two-third">
+<!--
             <div class="rel">
                 <div class="abs utility">
                     <div class="icon-to-left"><%= image_tag("icons/smallphone.png") %></div>Give us a Call: <strong>1-800-APTSTIK</strong> or <a href="#">E-mail Us</a> Directly.<div class="clear"></div>
                 </div>
             </div>
+-->
             <div class="mainmenu">
             <ul>
-                <li class="active"><%= link_to "Home", root_path %></li>
-                <li ><%= link_to "Features", features_path %></li>
-                <li ><%= link_to "Pricing", pricing_path %></a></li>
-                <li ><%= link_to "FAQ", faq_path %></li>
-                <li ><%= link_to "Support", support_path %></li>
-                <li ><%= link_to "Contact", contact_path %></li>
+                <li<%= active_class? root_path %>><%= link_to "Home", root_path %></li>
+                <li<%= active_class? features_path %>><%= link_to "Features", features_path %></li>
+                <li<%= active_class? pricing_path %>><%= link_to "Pricing", pricing_path %></a></li>
+                <li<%= active_class? faq_path %>><%= link_to "FAQ", faq_path %></li>
+                <li<%= active_class? support_path %>><%= link_to "Support", support_path %></li>
+                <li<%= active_class? contact_path %>><%= link_to "Contact", contact_path %></li>
             </ul>
             </div>
         </div>
@@ -206,9 +208,9 @@
     <div class="footer-small">
         <div class="full-width">
             <div class="one-half left">
-                &copy; 2011 Bogdan Rosu. All rights reserved.            </div>
+                &copy; 2011 Easy WordPress Backup. All rights reserved.
+			</div>
             <div class="one-half right">
-                Apptastik HTML by Bogdan Rosu available exclusively at <a href="http://themeforest.net/user/bogdanspn/portfolio?ref=bogdanspn">Themeforest</a>.
             </div>
             <div class="clear"></div>
         </div>

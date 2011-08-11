@@ -4,8 +4,9 @@ Wordpressbackup::Application.routes.draw do
   match '/faq', :to => 'pages#faq'
   match '/support', :to => 'pages#support'
   match '/contact', :to => 'pages#contact'
-
   match '/about', :to => 'pages#about'
+
+  match '/signup', :to => 'users#new'
 
   resources :sites
   resources :users

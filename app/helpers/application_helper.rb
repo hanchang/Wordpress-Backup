@@ -8,4 +8,9 @@ module ApplicationHelper
       "#{base_title} | #{@title}"
     end
   end
+
+  def active_class?(test_path)
+    return ' class=active' if current_page?(test_path)
+    ''
+  end
 end
