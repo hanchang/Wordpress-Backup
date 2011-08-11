@@ -11,7 +11,12 @@ class PagesController < ApplicationController
   def faq
   end
 
+  def support
+  end
+
   def contact
   end
 
+  def about
+  end
 end

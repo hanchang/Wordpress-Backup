@@ -1,16 +1,13 @@
 Wordpressbackup::Application.routes.draw do
-  get "pages/home"
+  match '/features', :to => 'pages#features'
+  match '/pricing', :to => 'pages#pricing'
+  match '/faq', :to => 'pages#faq'
+  match '/support', :to => 'pages#support'
+  match '/contact', :to => 'pages#contact'
 
-  get "pages/features"
-
-  get "pages/pricing"
-
-  get "pages/faq"
-
-  get "pages/contact"
+  match '/about', :to => 'pages#about'
 
   resources :sites
-
   resources :users
 
   # The priority is based upon order of creation:
@@ -62,7 +59,7 @@ Wordpressbackup::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => "welcome#index"
+  root :to => "pages#home"
 
   # See how all your routes lay out with "rake routes"
 
