@@ -118,13 +118,14 @@
     <div class="full-width rel">
         <div class="one-third"><div class="logo"><h2><%= link_to "Easy WordPress Backup", root_path %></h2></div></div>
         <div class="two-third">
-<!--
             <div class="rel">
                 <div class="abs utility">
+					<%= link_to "Sign Up Now!", signup_path %>
+<!--
                     <div class="icon-to-left"><%= image_tag("icons/smallphone.png") %></div>Give us a Call: <strong>1-800-APTSTIK</strong> or <a href="#">E-mail Us</a> Directly.<div class="clear"></div>
+-->
                 </div>
             </div>
--->
             <div class="mainmenu">
             <ul>
                 <li<%= active_class? root_path %>><%= link_to "Home", root_path %></li>
@@ -142,6 +143,9 @@
 <!-- end top -->
 <!-- start middle -->
 <div class="middle">
+<% flash.each do |key, value| %>
+	<div class="flash <%= key %>"><%= value %></div>
+<% end %>
 <%= yield %>
 </div>
 <!-- end middle  -->
@@ -213,6 +217,7 @@
             <div class="one-half right">
             </div>
             <div class="clear"></div>
+			<%= debug(params) if Rails.env.development? %>
         </div>
     </div>
 </div>
