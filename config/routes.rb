@@ -1,15 +1,20 @@
 Wordpressbackup::Application.routes.draw do
-  match '/features', :to => 'pages#features'
-  match '/pricing', :to => 'pages#pricing'
-  match '/faq', :to => 'pages#faq'
-  match '/support', :to => 'pages#support'
-  match '/contact', :to => 'pages#contact'
-  match '/about', :to => 'pages#about'
+  get "sessions/new"
 
-  match '/signup', :to => 'users#new'
+  match '/features', :to => 'pages#features'
+  match '/pricing',  :to => 'pages#pricing'
+  match '/faq',      :to => 'pages#faq'
+  match '/support',  :to => 'pages#support'
+  match '/contact',  :to => 'pages#contact'
+  match '/about',    :to => 'pages#about'
+
+  match '/signup', 	 :to => 'users#new'
+  match '/login',    :to => 'sessions#new'
+  match '/logout',   :to => 'sessions#destroy'
 
   resources :sites
   resources :users
+  resources :sessions, :only => [:new, :create, :destroy]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
